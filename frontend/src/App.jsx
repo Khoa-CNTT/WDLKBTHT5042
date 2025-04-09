@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import Footer from './components/Footer'
+import HealthChatbot from './components/HealthChatbot'
 import Navbar from './components/Navbar'
 import About from './pages/About'
 import Appointment from './pages/AppointMent'
@@ -13,7 +14,6 @@ import MyAppointments from './pages/MyAppointments'
 import MyProfile from './pages/MyProfile'
 import PaymentFailed from './pages/PaymentFailed'
 import PaymentSuccess from './pages/PaymentSuccess'
-
 const App = () => {
   const location = useLocation()
   const isLoginPage = location.pathname === '/login'
@@ -36,6 +36,7 @@ const App = () => {
         <Route path='/appointment/:docId' element={<Appointment />} />
         <Route path='/payment-success' element={<PaymentSuccess />} />
         <Route path='/payment-failed' element={<PaymentFailed />} />
+        <Route path='/chatbot' element={<HealthChatbot />} />
       </Routes>
 
       {!isLoginPage && <Footer />}
