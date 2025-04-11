@@ -16,3 +16,6 @@
   @apply hidden;
 }
 
+.cursor-not-allowed {
+  pointer-events: none; 
+}

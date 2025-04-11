@@ -101,6 +101,7 @@ const sendAppointmentConfirmationEmail = async (appointment) => {
             <div class="appointment-details">
                 <p><strong>Mã lịch hẹn:</strong> ${_id}</p>
                 <p><strong>Bác sĩ:</strong> ${docData.name}</p>
+                <p><strong>Khoа nội:</strong> ${docData.speciality}</p>
                 <p><strong>Ngày khám:</strong> ${slotDate}</p>
                 <p><strong>Thời gian:</strong> ${slotTime}</p>
                 <p><strong>Số tiền:</strong> ${amount.toLocaleString('vi-VN')} VND</p>

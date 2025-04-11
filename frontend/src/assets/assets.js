@@ -1,6 +1,7 @@
 import about_image from './about_image.png'
 import appointment_img from './appointment_img.png'
 import arrow_icon from './arrow_icon.svg'
+import bot_img from './botimg.png'
 import chats_icon from './chats_icon.svg'
 import xuongkhop from './co-xuong-khop.png'
 import contact_image from './contact_image.png'
@@ -59,7 +60,8 @@ export const assets = {
     stripe_logo,
     razorpay_logo,
     voice_icon,
-    voice_icon_slash
+    voice_icon_slash,
+    bot_img
 }
 
 export const specialityData = [

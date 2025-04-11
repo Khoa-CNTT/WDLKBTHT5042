@@ -186,5 +186,30 @@ const cancelAppointment = async (req, res) => {
     }
 }
 
-export { bookAppointment, cancelAppointment, getProfile, listAppointment, loginUser, registerUser, updateProfile };
+//api for get time booked
+const getBookedSlots = async (req, res) => {
+    try {
+        const { docId, slotDate } = req.body;
+        // Kiểm tra đầu vào
+        if (!docId || !slotDate) {
+            return res.status(400).json({ success: false, message: 'docId và slotDate là bắt buộc.' });
+        }
+        // Tìm các lịch hẹn đã đặt cho bác sĩ vào ngày cụ thể
+        const bookedSlots = await appointmentModel.find({
+            docId,
+            slotDate,
+            cancelled: false, // Chỉ lấy các lịch hẹn chưa bị hủy
+            isCompleted: false, // Chỉ lấy các lịch hẹn chưa hoàn thành
+        }).select('slotTime'); // Chỉ lấy trường slotTime
+
+        // Trả về danh sách các khung giờ đã đặt
+        const bookedTimes = bookedSlots.map(slot => slot.slotTime);
+        res.json({ success: true, bookedTimes });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Lỗi server.' });
+    }
+}
+
+export { bookAppointment, cancelAppointment, getBookedSlots, getProfile, listAppointment, loginUser, registerUser, updateProfile };
 
