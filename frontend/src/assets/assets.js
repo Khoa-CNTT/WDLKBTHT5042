@@ -36,6 +36,7 @@ import thankinh from './than-kinh.png'
 import than from './than-tiet-nieu.png'
 import tieuhoa from './tieu-hoa.png'
 import timmach from './tim-mach.png'
+import tongquat from './tong-quat.png'
 import truyennhiem from './truyen-nhiem.png'
 import upload_icon from './upload_icon.png'
 import verified_icon from './verified_icon.svg'
@@ -61,7 +62,8 @@ export const assets = {
     razorpay_logo,
     voice_icon,
     voice_icon_slash,
-    bot_img
+    bot_img,
+    tongquat
 }
 
 export const specialityData = [
@@ -97,6 +99,10 @@ export const specialityData = [
         speciality: 'Thận - Niệu',
         image: than
     },
+    {
+        speciality: 'Nội Tổng Quát',
+        image: tongquat
+    }
 ]
 
 export const doctors = [

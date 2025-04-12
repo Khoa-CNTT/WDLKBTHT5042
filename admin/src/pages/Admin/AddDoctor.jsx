@@ -120,6 +120,7 @@ const AddDoctor = () => {
                                 <option value="Nội Tiết">Nội Tiết</option>
                                 <option value="Truyền Nhiễm">Truyền Nhiễm</option>
                                 <option value="Thận - Niệu">Thận - Niệu</option>
+                                <option value="Nội Tổng Quát">Nội Tổng Quát</option>
                             </select>
                         </div>
                         <div className='flex-1 flex flex-col gap-1'>
