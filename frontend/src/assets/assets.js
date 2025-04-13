@@ -40,6 +40,7 @@ import upload_icon from './upload_icon.png'
 import verified_icon from './verified_icon.svg'
 import voice_icon from './voice.png'
 import voice_icon_slash from './voice_red.png'
+
 export const assets = {
     appointment_img,
     header_img,

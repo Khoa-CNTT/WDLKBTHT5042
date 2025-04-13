@@ -243,7 +243,7 @@ const AppointMent = () => {
               </p>
             ))}
           </div>
-          <button onClick={bookAppointment} className='bg-primary text-white text-lg font-light px-14 py-3 rounded-full my-6'>Đặt lịch khám</button>
+          <button onClick={bookAppointment} className='bg-primary text-white text-lg font-light px-14 py-3 rounded-full my-6 cursor-pointer'>Đặt lịch khám</button>
         </div>
 
         {/* Listing Related Doctor */}

@@ -64,11 +64,11 @@ const MyAppointments = () => {
               <p className='text-xs mt-1'><span className='text-sm text-neutral-700 font-medium'>Thời Gian: </span>{item.slotTime} | {item.slotDate}</p>
             </div>
             <div></div>
-            <div className='flex flex-col gap-3 justify-center min-w-[150px]'>
+            <div className='flex flex-col gap-3 justify-center min-w-[150px] '>
               {/* Trường hợp đã hủy */}
               {item.cancelled && (
                 <button 
-                  className='text-sm font-medium text-red-500 text-center px-4 py-2.5 border border-red-200 rounded-md bg-red-50'
+                  className='text-sm font-medium text-red-500 text-center px-4 py-2.5 border border-red-200 rounded-md bg-red-50 cursor-pointer'
                   disabled
                 >
                   Đã Hủy
@@ -78,7 +78,7 @@ const MyAppointments = () => {
               {/* Trường hợp đã hoàn thành và thanh toán */}
               { item.payment && (
                 <button
-                  className='text-sm font-medium text-green-500 text-center px-4 py-2.5 border border-green-200 rounded-md bg-green-50'
+                  className='text-sm font-medium text-green-500 text-center px-4 py-2.5 border border-green-200 rounded-md bg-green-50 cursor-pointer'
                   disabled
                 >
                   Đã Thanh Toán
@@ -86,15 +86,20 @@ const MyAppointments = () => {
               )}
 
               {/* Trường hợp đã hoàn thành nhưng chưa thanh toán */}
-              {!item.cancelled && !item.payment && (
-                <PaymentButton appointmentId={item._id} amount={item.amount} />
-              )}
+{!item.cancelled && !item.payment && (
+  <PaymentButton
+    appointmentId={item._id}
+    amount={item.amount}
+    className="cursor-pointer"
+  />
+)}
+
 
               {/* Trường hợp chưa hủy và chưa hoàn thành */}
               {!item.cancelled && !item.isCompleted && (
                 <button 
                   onClick={() => handleCancelAppointment(item._id)}
-                  className='text-sm font-medium text-stone-600 text-center px-4 py-2.5 border border-red-200 rounded-md hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-300 shadow-sm'
+                  className='text-sm font-medium text-stone-600 text-center px-4 py-2.5 border border-red-200 rounded-md hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-300 shadow-sm cursor-pointer'
                 >
                   Hủy Lịch Hẹn
                 </button>
@@ -102,7 +107,7 @@ const MyAppointments = () => {
               {item.isCompleted && (
                 <button 
                   onClick={() => handleCancelAppointment(item._id)}
-                  className='text-sm font-medium text-stone-600 text-center px-4 py-2.5 border border-green-200 rounded-md hover:bg-green-500 hover:text-white hover:border-green-500 transition-all duration-300 shadow-sm'
+                  className='text-sm font-medium text-stone-600 text-center px-4 py-2.5 border border-green-200 rounded-md hover:bg-green-500 hover:text-white hover:border-green-500 transition-all duration-300 shadow-sm cursor-pointer'
                 >
                   Đã Hoàn Thành
                 </button>

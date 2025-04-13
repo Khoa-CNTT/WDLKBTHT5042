@@ -155,7 +155,7 @@ const Login = () => {
 
           <button
             type="submit"
-            className="w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
+            className="w-full py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 cursor-pointer"
           >
             {state === 'Đăng nhập' ? 'Đăng nhập' : 'Đăng ký'}
           </button>
@@ -165,7 +165,7 @@ const Login = () => {
             <button
               type="button"
               onClick={() => setState(state === 'Đăng nhập' ? 'Đăng ký' : 'Đăng nhập')}
-              className="text-purple-400 hover:text-purple-300 transition-colors duration-300"
+              className="text-purple-400 hover:text-purple-300 transition-colors duration-300 cursor-pointer"
             >
               {state === 'Đăng nhập' ? 'Đăng ký' : 'Đăng nhập'}
             </button>
