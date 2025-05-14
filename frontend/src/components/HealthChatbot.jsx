@@ -148,7 +148,7 @@ const HealthChatbot = () => {
                     <h2 className="text-xl font-bold tracking-wide">Health Chatbot - Tư vấn triệu chứng</h2>
                     <button
                         onClick={clearChatHistory}
-                        className="px-4 py-1.5 bg-red-600 hover:bg-red-700 rounded-lg text-sm font-medium transition-all duration-300"
+                        className="px-4 py-1.5 bg-red-600 hover:bg-red-700 rounded-lg text-sm font-medium transition-all duration-300 cursor-pointer"
                     >
                         Xóa lịch sử
                     </button>
@@ -206,13 +206,13 @@ const HealthChatbot = () => {
                         type="button"
                         onClick={handleVoiceInput}
                         className={`p-3 mx-3 rounded-full ${isListening ? 'bg-red-600 hover:bg-red-700' : 'bg-gray-200 hover:bg-gray-300'
-                            } transition-all duration-300`}
+                            } transition-all duration-300 cursor-pointer`}
                     >
                         <img className="w-6 h-6" src={isListening ? assets.voice_icon_slash : assets.voice_icon} alt="Voice Input" />
                     </button>
                     <button
                         type="submit"
-                        className="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300"
+                        className="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 cursor-pointer"
                     >
                         Gửi
                     </button>
